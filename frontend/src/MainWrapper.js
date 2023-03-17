@@ -7,7 +7,8 @@ export default function MainWrapper() {
             display: 'flex',
             height: '100vh',
             width: '100vw',
-            margin: '0'
+            margin: '0',
+            opacity: '0'
         }}>
     </Box>
   )
