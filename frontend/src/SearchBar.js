@@ -32,11 +32,16 @@ export default function SearchBar() {
         {films.filter((film) =>{
           return searchTerm.toLowerCase() === '' ? film : film.name.toLowerCase().includes(searchTerm);
         }).map((film) => (
-          <tr>
+          <><tr>
           <td>{film.name}</td>
-          <td>{film.year}</td>
-          <td>{film.my_rating}</td>
           </tr>
+          <tr>
+            <td>{film.year}</td>
+          </tr>
+          <tr>
+            <td>{film.my_rating}</td>
+          </tr>
+          </>
         ))}
       </tbody>
     </Container>

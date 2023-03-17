@@ -2,6 +2,7 @@ import MainWrapper from "./MainWrapper";
 import Personal from "./Personal";
 import './App.css';
 import SearchBar from "./SearchBar";
+import Hello from "./Hello"
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
       <SearchBar />
       <Personal />
+      <Hello />
     </>
       
     
