@@ -10,12 +10,12 @@ function App() {
 
   return (
     <>
-    
+      <MainWrapper>
       <SubmitEmail />
       <SearchBar />
       <Personal />
       <Hello />
-    
+      </MainWrapper>
     </>
       
     

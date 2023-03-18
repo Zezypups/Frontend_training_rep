@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
-export default function MainWrapper() {
+export default function MainWrapper(props) {
   return (
     <Box
         sx={{
@@ -8,8 +9,10 @@ export default function MainWrapper() {
             height: '100vh',
             width: '100vw',
             margin: '0',
-            opacity: '0'
         }}>
+        <Container maxWidth="lg">
+        {props.children}
+        </Container>
     </Box>
   )
 }
