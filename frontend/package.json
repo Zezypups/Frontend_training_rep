@@ -46,7 +46,7 @@
     ]
   },
   "options": {
-    "allowedHosts": ["localhost:3000"],
+    "allowedHosts": ["localhost", ".localhost"],
     "proxy": "http://localhost:3001"
   }
 }

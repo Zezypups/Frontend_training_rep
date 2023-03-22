@@ -12,21 +12,19 @@
 }
 */
 import axios from 'axios'
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 
 export default function SubmitEmail() {
-  const [post, setPost] = useState({
-    title: '',
-    body: ''
-  })
+  const [email, setEmail] = useState(''); 
+  
   const handleInput = (event) => {
-      setPost({...post, [event.target.name]: event.target.value})
+      setEmail({...email, [event.target.name]: event.target.value})
   }
 
   function handleSubmit(event) {
     event.preventDefault()
-    axios.post('/api/submit/:email', {post})
+    axios.post(`/api/submit/${email}`, {email})
     .then(response => console.log(response))
     .catch(err => console.log(err))
   }
@@ -34,7 +32,7 @@ export default function SubmitEmail() {
     <div>
       <form onSubmit={handleSubmit}>
         Email: <input type="text" name="email" onChange={handleInput}></input>
-        <button className="">Submit</button>
+        <button className="submit-button">Submit</button>
       </form>
     </div>
   )
